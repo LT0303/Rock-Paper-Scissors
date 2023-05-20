@@ -1,19 +1,32 @@
-let computerChoice = '';
-
-let getComputerChoice = () => {
+function getComputerChoice() {
     let randNum = Math.floor(Math.random() * 9) + 1;
+    let computerChoice = '';
     switch (randNum) {
-        case 1, 2, 3:
+        case 1: 
+        case 2: 
+        case 3:
             computerChoice = 'rock';
             break;
-        case 4, 5, 6:
+        case 4:
+        case 5: 
+        case 6:
             computerChoice = 'paper';
             break;
-        case 7, 8, 9:
+        case 7: 
+        case 8: 
+        case 9:
             computerChoice = 'scissors';
             break;
-    }
+    };
+
     return computerChoice;
 }
 
-let playerChoice = prompt('Enter rock, paper, or scissors');
+const computerChoice = getComputerChoice();
+console.log(computerChoice);
+/* let playerChoice = prompt('Enter rock, paper, or scissors').toLowerCase();
+
+if(playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
+    console.log(computerChoice);
+} */
+
