@@ -23,10 +23,3 @@ function getComputerChoice() {
 }
 
 const computerChoice = getComputerChoice();
-console.log(computerChoice);
-/* let playerChoice = prompt('Enter rock, paper, or scissors').toLowerCase();
-
-if(playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
-    console.log(computerChoice);
-} */
-
