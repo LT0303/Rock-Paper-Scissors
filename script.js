@@ -25,26 +25,21 @@ function getComputerChoice() {
 const computerChoice = getComputerChoice();
 const playerChoice = prompt('Enter rock, paper, or scissors').toLowerCase();
 
-function game(computerChoice, playerChoice) {
-    let validAnswer = true;
-    if (playerChoice !== 'rock' || playerChoice !== 'paper' || playerChoice !== 'scissors') {
-        validAnswer = false;
-        playerChoice = prompt(`You didn't enter a valid move! Please enter rock, paper, or scissors.`);
-        if(playerChoice === computerChoice) {
-            alert('You won!');
+function checkAnswer (playerChoice) {
+    let validChoice = false;
+    while (!validChoice) {
+        if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
+            validChoice = true;
+            break;
         } else {
-            alert('You lost!')
+            playerChoice = prompt(`You entered an invalid move! Please enter rock, paper, or scissors.`);
         }
-    } else {
-        while(!validAnswer) {
-            
-        }
-        
     }
+    return validChoice;
 }
 
-game(computerChoice, playerChoice);
+const validChoice = checkAnswer();
 
-/* while (playerChoice !== 'rock' && playerChoice !== 'paper' && playerChoice !== 'scissors') {
-            playerChoice = prompt(`You didn't enter a valid move! Please enter rock, paper, or scissors.`);
-        } */
+
+
+
