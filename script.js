@@ -13,4 +13,7 @@ let getComputerChoice = () => {
             computerChoice = 'scissors';
             break;
     }
+    return computerChoice;
 }
+
+let playerChoice = prompt('Enter rock, paper, or scissors');
