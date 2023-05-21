@@ -32,13 +32,13 @@ function checkAnswer (playerChoice) {
             validChoice = true;
             break;
         } else {
-            playerChoice = prompt(`You entered an invalid move! Please enter rock, paper, or scissors.`);
+            playerChoice = prompt(`You entered an invalid move! Please enter rock, paper, or scissors.`).toLowerCase;
         }
     }
     return validChoice;
 }
 
-const validChoice = checkAnswer();
+checkAnswer(playerChoice);
 
 
 
