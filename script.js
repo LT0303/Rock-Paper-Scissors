@@ -38,14 +38,12 @@ function checkAnswer (playerChoice) {
     }
 }
 
-checkAnswer(playerChoice);
-
 function game (playerChoice, computerChoice) {
+    checkAnswer(playerChoice);
     if (playerChoice === computerChoice) {
         alert('You won!');
     } else {
         alert('You lose!');
     }
 }
-
 game(playerChoice, computerChoice);
